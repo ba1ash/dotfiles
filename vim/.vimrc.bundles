@@ -23,6 +23,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
 Plug 'elixir-lang/vim-elixir'
 Plug 'airblade/vim-gitgutter'
+Plug 'jgdavey/vim-blockle'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
