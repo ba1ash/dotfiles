@@ -163,3 +163,5 @@ let g:solarized_termcolors=256
 colorscheme monokai
 
 set relativenumber
+
+autocmd BufNewFile,BufRead *.slim set ft=slim
