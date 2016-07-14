@@ -72,7 +72,7 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
 
   " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
+  " let g:ctrlp_use_caching = 0
 
   " bind \ (backward slash) to grep shortcut
   command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
@@ -104,7 +104,7 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
 " Switch between the last two files
-nnoremap <leader><leader> <c-^>
+" nnoremap <leader><leader> <c-^>
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
@@ -113,14 +113,14 @@ nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
 " vim-test mappings
-nnoremap <silent> <Leader>t :TestFile<CR>
-nnoremap <silent> <Leader>s :TestNearest<CR>
-nnoremap <silent> <Leader>l :TestLast<CR>
-nnoremap <silent> <Leader>a :TestSuite<CR>
-nnoremap <silent> <leader>gt :TestVisit<CR>
+" nnoremap <silent> <Leader>t :TestFile<CR>
+" nnoremap <silent> <Leader>s :TestNearest<CR>
+" nnoremap <silent> <Leader>l :TestLast<CR>
+" nnoremap <silent> <Leader>a :TestSuite<CR>
+" nnoremap <silent> <leader>gt :TestVisit<CR>
 
-" Run commands that require an interactive shell
-nnoremap <Leader>r :RunInInteractiveShell<space>
+" Rexplore faster
+nnoremap <Leader>r :Rexpolore<CR>
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
@@ -160,8 +160,11 @@ endif
 syntax enable
 set background=light
 let g:solarized_termcolors=256
-colorscheme monokai
+color dracula
 
 set relativenumber
 
 autocmd BufNewFile,BufRead *.slim set ft=slim
+
+" Mouse
+set mouse=a
