@@ -121,7 +121,7 @@ nnoremap <Down> :echoe "Use j"<CR>
 " nnoremap <silent> <leader>gt :TestVisit<CR>
 
 " Rexplore faster
-nnoremap <Leader>r :Rexpolore<CR>
+nnoremap <Leader>r :Rexplore<CR>
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
