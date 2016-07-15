@@ -87,6 +87,7 @@ set colorcolumn=+1
 " Numbers
 set number
 set numberwidth=5
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
 
 " Tab completion
 " will insert tab at beginning of line,
