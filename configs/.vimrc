@@ -169,3 +169,6 @@ autocmd BufNewFile,BufRead *.slim set ft=slim
 
 " Mouse
 set mouse=a
+
+" pry shortcut
+nnoremap <leader>bp obinding.pry<esc>:w<cr>
