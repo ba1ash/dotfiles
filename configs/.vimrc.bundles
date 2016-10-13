@@ -27,7 +27,6 @@ Plug 'jgdavey/vim-blockle'
 Plug 'ervandew/supertab'
 Plug 'vim-airline/vim-airline'
 Plug 'nelstrom/vim-markdown-folding'
-Plug 'tpope/vim-cucumber'
 Plug 'fatih/vim-go'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
