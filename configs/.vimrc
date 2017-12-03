@@ -82,8 +82,8 @@ if executable('ag')
   nnoremap \ :Ag<SPACE>
 endif
 
-" Make it obvious where 80 characters is
-set textwidth=80
+" Make it obvious where 110 characters is
+set textwidth=110
 set colorcolumn=+1
 
 " Numbers
