@@ -1,5 +1,43 @@
 scriptencoding utf-8
 set encoding=utf-8
+
+" Plugins, vim-plug
+call plug#begin('~/.local/share/nvim/plugged')
+
+Plug 'janko-m/vim-test'
+Plug 'kchmck/vim-coffee-script'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'scrooloose/syntastic'
+Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-obsession'
+Plug 'vim-ruby/vim-ruby'
+Plug 'vim-scripts/tComment'
+Plug 'elixir-lang/vim-elixir'
+Plug 'airblade/vim-gitgutter'
+Plug 'jgdavey/vim-blockle'
+Plug 'ervandew/supertab'
+Plug 'itchyny/lightline.vim'
+Plug 'nelstrom/vim-markdown-folding'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'jceb/vim-orgmode'
+Plug 'tpope/vim-speeddating'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'rakr/vim-one'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+
 " Leader
 let mapleader = " "
 
@@ -19,15 +57,6 @@ set hls
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
-endif
-
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
-endif
-
-" Load matchit.vim, but only if the user hasn't installed a newer version.
-if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
-  runtime! macros/matchit.vim
 endif
 
 filetype plugin indent on
@@ -83,7 +112,7 @@ if executable('ag')
 endif
 
 " Make it obvious where 110 characters is
-set textwidth=110
+set textwidth=100
 set colorcolumn=+1
 
 " Numbers
@@ -156,17 +185,6 @@ set complete+=kspell
 " Always use vertical diffs
 set diffopt+=vertical
 
-" Local config
-if filereadable($HOME . "/.vimrc.local")
-  source ~/.vimrc.local
-endif
-
-" Theme config
-syntax enable
-set background=light
-let g:solarized_termcolors=256
-color dracula
-
 set relativenumber
 
 autocmd BufNewFile,BufRead *.slim set ft=slim
@@ -176,3 +194,12 @@ set mouse=a
 
 " pry shortcut
 nnoremap <leader>bp orequire 'pry';binding.pry<esc>:w<cr>
+
+" Theme config
+syntax enable
+set termguicolors
+colorscheme one
+set background=dark
+let g:lightline = {
+  \ 'colorscheme': 'one',
+  \ }
