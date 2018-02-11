@@ -39,6 +39,7 @@ export SHORT_TERM_LINE=true
 export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
 
 export EDITOR=nvim
+export LESS='--raw-control-chars'
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
 set -o vi
