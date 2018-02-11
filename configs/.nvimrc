@@ -95,22 +95,7 @@ set list listchars=tab:»·,trail:·,nbsp:·
 " Use one space, not two, after punctuation.
 set nojoinspaces
 
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag -Q -l --nocolor --hidden -g "" %s'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-
-  " bind \ (backward slash) to grep shortcut
-  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-
-  nnoremap \ :Ag<SPACE>
-endif
+set grepprg=rg\ --vimgrep
 
 " Make it obvious where 110 characters is
 set textwidth=100
@@ -193,8 +178,11 @@ autocmd BufNewFile,BufRead *.slim set ft=slim
 " Mouse
 set mouse=a
 
-" pry shortcut
 nnoremap <leader>bp orequire 'pry';binding.pry<esc>:w<cr>
+nnoremap <leader>pf :Files<cr>
+nnoremap <leader>pt :Tags<cr>
+nnoremap K :grep "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap \ :grep 
 
 " Theme config
 syntax enable
