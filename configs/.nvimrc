@@ -33,6 +33,7 @@ Plug 'tpope/vim-speeddating'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'rakr/vim-one'
+Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
@@ -187,8 +188,9 @@ nnoremap \ :grep
 " Theme config
 syntax enable
 set termguicolors
-colorscheme one
+colorscheme gruvbox
 set background=dark
+let g:gruvbox_contrast_dark= 'hard'
 let g:lightline = {
-  \ 'colorscheme': 'one',
+  \ 'colorscheme': 'powerline',
   \ }
