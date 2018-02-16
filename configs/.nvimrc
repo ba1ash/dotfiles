@@ -7,7 +7,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'janko-m/vim-test'
 Plug 'kchmck/vim-coffee-script'
 Plug 'pbrisbin/vim-mkdir'
-Plug 'scrooloose/syntastic'
+Plug 'neomake/neomake'
 Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-endwise'
@@ -21,7 +21,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-obsession'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
-Plug 'elixir-lang/vim-elixir'
 Plug 'airblade/vim-gitgutter'
 Plug 'jgdavey/vim-blockle'
 Plug 'ervandew/supertab'
@@ -184,6 +183,14 @@ nnoremap <leader>pf :Files<cr>
 nnoremap <leader>pt :Tags<cr>
 nnoremap K :grep "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap \ :grep 
+
+" mxm/vim-jsx
+let g:jsx_ext_required = 0
+
+" vim-javascript
+let g:javascript_plugin_flow = 1
+
+autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
 
 " Theme config
 syntax enable
