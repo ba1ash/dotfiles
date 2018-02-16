@@ -40,7 +40,10 @@ export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
 
 export EDITOR=nvim
 export LESS='--raw-control-chars'
-# Load Bash It
+export PATH="$PATH:/home/ba1ash/projects/arc/arcanist/bin/"
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+ #Load Bash It
 source "$BASH_IT"/bash_it.sh
 set -o vi
 
