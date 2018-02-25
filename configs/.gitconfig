@@ -1,6 +1,6 @@
 [user]
-	email = ba1ash@zivitech.com
-	name = ba1ash
+	# email = 
+	# name = 
 [pull]
 	rebase = true
 [url "https://github.com"]
