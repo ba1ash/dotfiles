@@ -1,0 +1,7 @@
+alacritty
+neovim
+tmux
+pgcli
+fzf
+ripgrep
+rbenv|rvm

@@ -1,6 +1,5 @@
 #
 # ~/.bashrc
-#
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -39,9 +38,19 @@ export SHORT_TERM_LINE=true
 export BASH_IT_AUTOMATIC_RELOAD_AFTER_CONFIG_CHANGE=1
 
 export EDITOR=nvim
-export LESS='--raw-control-chars'
 export PATH="$PATH:/home/ba1ash/projects/arc/arcanist/bin/"
 export PATH="$HOME/.rbenv/bin:$PATH"
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+export YELLOW=`echo -e '\033[1;33m'`
+export LIGHT_CYAN=`echo -e '\033[1;36m'`
+export GREEN=`echo -e '\033[0;32m'`
+export NOCOLOR=`echo -e '\033[0m'`
+export LESS="--raw-control-chars -iMSx4 -FXR"
+export PAGER="sed \"s/^\(([0-9]\+ [rows]\+)\)/$GREEN\1$NOCOLOR/;s/^\(-\[\ RECORD\ [0-9]\+\ \][-+]\+\)/$GREEN\1$NOCOLOR/;s/|/$GREEN|$NOCOLOR/g;s/^\([-+]\+\)/$GREEN\1$NOCOLOR/\" 2>/dev/null | less"
+
+eval "$(rbenv init -)"
 
  #Load Bash It
 source "$BASH_IT"/bash_it.sh
@@ -49,5 +58,5 @@ set -o vi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-alias tmux="env TERM=xterm-256color tmux"
 alias vim="nvim"
+alias startx='ssh-agent startx'

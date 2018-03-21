@@ -36,6 +36,7 @@ Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'posva/vim-vue'
 
 call plug#end()
 
@@ -195,9 +196,9 @@ autocmd FileType javascript set tabstop=2|set shiftwidth=2|set expandtab
 " Theme config
 syntax enable
 set termguicolors
-colorscheme gruvbox
 set background=dark
 let g:gruvbox_contrast_dark= 'hard'
+colorscheme gruvbox
 let g:lightline = {
   \ 'colorscheme': 'powerline',
   \ }
