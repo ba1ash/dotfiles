@@ -38,6 +38,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'posva/vim-vue'
 Plug 'tpope/vim-fireplace'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
