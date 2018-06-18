@@ -27,6 +27,12 @@ export NOCOLOR=`echo -e '\033[0m'`
 export LESS="--raw-control-chars -iMSx4 -FXR"
 export PAGER="sed \"s/^\(([0-9]\+ [rows]\+)\)/$GREEN\1$NOCOLOR/;s/^\(-\[\ RECORD\ [0-9]\+\ \][-+]\+\)/$GREEN\1$NOCOLOR/;s/|/$GREEN|$NOCOLOR/g;s/^\([-+]\+\)/$GREEN\1$NOCOLOR/\" 2>/dev/null | less"
 
+# history configuration
+export HISTCONTROL=ignoredups:erasedups
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+shopt -s histappend
+# export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 source "$BASH_IT"/bash_it.sh
 source "/opt/alacritty/alacritty-completions.bash"
