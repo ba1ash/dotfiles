@@ -178,7 +178,6 @@ set relativenumber
 
 autocmd BufNewFile,BufRead *.slim set ft=slim
 
-" Mouse
 set mouse=a
 
 nnoremap <leader>bp orequire 'pry';binding.pry<esc>:w<cr>
@@ -204,3 +203,5 @@ colorscheme gruvbox
 let g:lightline = {
   \ 'colorscheme': 'powerline',
   \ }
+
+set fo=jcrocl
