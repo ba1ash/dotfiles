@@ -39,6 +39,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'posva/vim-vue'
 Plug 'tpope/vim-fireplace'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-vinegar'
 
 call plug#end()
 
