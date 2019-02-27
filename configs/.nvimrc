@@ -40,6 +40,7 @@ Plug 'posva/vim-vue'
 Plug 'tpope/vim-fireplace'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-vinegar'
+Plug 'dhruvasagar/vim-table-mode'
 
 call plug#end()
 

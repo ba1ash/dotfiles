@@ -36,7 +36,8 @@ shopt -s histappend
 
 source "$BASH_IT"/bash_it.sh
 source "/opt/alacritty/alacritty-completions.bash"
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+source ~/.fzf.bash
+source /usr/share/git/completion/git-completion.bash
 
 set -o vi
 unset MAILCHECK
