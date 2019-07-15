@@ -1,2 +1,3 @@
 set editing-mode vi
 set keymap vi-command
+"\C-e": edit-and-execute-command
