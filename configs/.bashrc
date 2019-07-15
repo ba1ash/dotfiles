@@ -16,7 +16,8 @@ export SCM_CHECK=true
 export SHORT_HOSTNAME=$(hostname -s)
 export SHORT_TERM_LINE=true
 export EDITOR=nvim
-export PATH="$PATH:/home/ba1ash/projects/arc/arcanist/bin/"
+export PATH="$PATH:/home/ba1ash/.local/bin"
+export PATH="$PATH:/opt"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -35,7 +36,7 @@ shopt -s histappend
 # export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 source "$BASH_IT"/bash_it.sh
-source "/opt/alacritty/alacritty-completions.bash"
+source "$HOME/opt/alacritty/alacritty-completions.bash"
 source ~/.fzf.bash
 source /usr/share/git/completion/git-completion.bash
 
@@ -43,3 +44,7 @@ set -o vi
 unset MAILCHECK
 
 eval "$(rbenv init -)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
