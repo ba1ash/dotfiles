@@ -42,6 +42,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-vinegar'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'elixir-editors/vim-elixir'
 
 call plug#end()
 

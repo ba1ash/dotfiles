@@ -37,6 +37,7 @@ shopt -s histappend
 
 source "$BASH_IT"/bash_it.sh
 source "$HOME/opt/alacritty/alacritty-completions.bash"
+source "$HOME/opt/elixir_auto_complete/all_elixir_auto_complete.bash"
 source ~/.fzf.bash
 source /usr/share/git/completion/git-completion.bash
 
